@@ -2,8 +2,6 @@
 
 > 📥 A vibrant web application that allows you to download YouTube videos and audio in various formats and qualities.
 
-![YouTube Downloader](https://github-production-user-asset-6210df.s3.amazonaws.com/122639760/245095778-a9d8d42f-1d9e-4c1a-b7d3-b82ae59d0a5e.png)
-
 <div align="center">
   
 [![Made with Node.js](https://img.shields.io/badge/Made%20with-Node.js-3C873A?style=for-the-badge&logo=node.js)](https://nodejs.org/en/)
