@@ -380,7 +380,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p class="mb-0 text-muted small">Created: ${formatDate(file.createdAt)}</p>
                 </div>
                 <div class="card-footer bg-white d-flex justify-content-between">
-                    <a href="${file.path}" class="btn btn-sm btn-outline-primary" download>
+                    <a href="${file.path}" class="btn btn-sm btn-outline-success" download>
                         <i class="bi bi-download"></i> Download
                     </a>
                     <button class="btn btn-sm btn-outline-danger delete-file" data-filename="${file.name}">
