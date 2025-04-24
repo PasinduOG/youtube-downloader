@@ -36,7 +36,7 @@
 
 ### 🔌 Real-time Communication
   
-![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat&logo=socket.io&logoColor=white) Socket.io
+![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat&logo=socket.io&logoColor=white)
 
 </div>
 
