@@ -40,7 +40,8 @@
 
 </div>
 
-### 📹 Video Processing
+### 📹 Video Processing<br/>
+[![My Skills](https://skillicons.dev/icons?i=npm,nodejs)](https://skillicons.dev)
 - youtube-dl-og
 
 ## 📋 Prerequisites
