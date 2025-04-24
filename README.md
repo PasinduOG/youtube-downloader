@@ -108,6 +108,26 @@ youtube-downloader/
 - 📋 `GET /api/files` - List downloaded files
 - 🗑️ `DELETE /api/files/:filename` - Delete a file
 
+## 🔄 Recent Updates
+
+### Version 2.0.0 (February 2024)
+- ✨ Added dark mode support with system preference detection
+- 🚀 Improved download speed and reliability
+- 🔧 Enhanced error handling and user feedback
+- 📱 Better mobile responsiveness
+- 🛠️ Updated dependencies to latest versions
+
+### Version 1.5.0 (December 2023)
+- ⚡ Implemented Socket.io for real-time download progress
+- 🎨 Redesigned user interface with Bootstrap 5
+- 📊 Added detailed progress tracking with percentage and speed
+- 🔍 Improved video info display with more details
+
+### Version 1.0.0 (October 2023)
+- 🎬 Initial release with basic download functionality
+- 🎵 Support for video and audio downloads
+- 📁 File management system
+
 ## 📜 License
 
 This project is licensed under the MIT License.

@@ -19,6 +19,63 @@ document.addEventListener('DOMContentLoaded', function() {
     const downloadProgressContainer = document.getElementById('downloadProgressContainer');
     const downloadProgressBar = document.getElementById('downloadProgressBar');
     const downloadPercentage = document.getElementById('downloadPercentage');
+    const themeToggler = document.getElementById('themeToggler');
+    const lightIcon = document.getElementById('lightIcon');
+    const darkIcon = document.getElementById('darkIcon');
+
+    // Theme management
+    function initializeTheme() {
+        const savedTheme = localStorage.getItem('theme');
+        const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+            document.body.classList.add('dark-mode');
+            lightIcon.classList.add('d-none');
+            darkIcon.classList.remove('d-none');
+        } else {
+            document.body.classList.remove('dark-mode');
+            lightIcon.classList.remove('d-none');
+            darkIcon.classList.add('d-none');
+        }
+    }
+    
+    function toggleTheme() {
+        if (document.body.classList.contains('dark-mode')) {
+            document.body.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
+            lightIcon.classList.remove('d-none');
+            darkIcon.classList.add('d-none');
+        } else {
+            document.body.classList.add('dark-mode');
+            localStorage.setItem('theme', 'dark');
+            lightIcon.classList.add('d-none');
+            darkIcon.classList.remove('d-none');
+        }
+    }
+    
+    // Listen for system theme changes
+    if (window.matchMedia) {
+        window.matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change', e => {
+                if (!localStorage.getItem('theme')) {
+                    if (e.matches) {
+                        document.body.classList.add('dark-mode');
+                        lightIcon.classList.add('d-none');
+                        darkIcon.classList.remove('d-none');
+                    } else {
+                        document.body.classList.remove('dark-mode');
+                        lightIcon.classList.remove('d-none');
+                        darkIcon.classList.add('d-none');
+                    }
+                }
+            });
+    }
+    
+    // Initialize theme on load
+    initializeTheme();
+    
+    // Theme toggle button event
+    themeToggler.addEventListener('click', toggleTheme);
 
     // Socket.io connection
     const socket = io();
@@ -137,9 +194,17 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Show download status and reset progress bar
-            downloadStatus.textContent = 'Downloading...';
+            downloadStatus.textContent = 'Downloading... ';
             downloadStatus.classList.remove('d-none', 'bg-success');
-            downloadStatus.classList.add('bg-warning');
+            downloadStatus.classList.add('bg-danger');
+            
+            // Add spinner to download status
+            const statusSpinner = document.createElement('span');
+            statusSpinner.className = 'spinner-border spinner-border-sm ms-1';
+            statusSpinner.setAttribute('role', 'status');
+            statusSpinner.innerHTML = '<span class="visually-hidden">Loading...</span>';
+            downloadStatus.appendChild(statusSpinner);
+            
             downloadBtn.disabled = true;
             
             // Show progress bar
@@ -164,9 +229,9 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const result = await response.json();
             
-            // Show success status
+            // Show success status and remove spinner
             downloadStatus.textContent = 'Success!';
-            downloadStatus.classList.remove('bg-warning');
+            downloadStatus.classList.remove('bg-danger');
             downloadStatus.classList.add('bg-success');
             
             // Complete the progress bar
@@ -182,6 +247,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 1000);
             
         } catch (error) {
+            // Remove spinner from download status in case of error
             downloadStatus.textContent = 'Failed';
             downloadStatus.classList.remove('bg-warning');
             downloadStatus.classList.add('bg-danger');
