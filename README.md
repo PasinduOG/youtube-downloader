@@ -130,9 +130,9 @@ This project is licensed under the MIT License.
 
 Developed with ❤️ by Pasindu Madhuwantha (Pasindu OG)
 
-<div align="center">
+<div align="start">
   
-[![My Skills](https://skillicons.dev/icons?i=github)](https://github.com/PasinduOG)
+[![GitHub](https://img.shields.io/badge/github-000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/PasinduOG)
 [![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@pasindu_og_dev)
 [![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/pasindu.og.dev)
 
@@ -140,7 +140,7 @@ Developed with ❤️ by Pasindu Madhuwantha (Pasindu OG)
 
 ## 🙏 Acknowledgments
 
-<div align="center">
+<div align="start">
   
 [![My Skills](https://skillicons.dev/icons?i=nodejs,bootstrap)](https://skillicons.dev)
 
@@ -151,7 +151,7 @@ Developed with ❤️ by Pasindu Madhuwantha (Pasindu OG)
 - 🔣 Icons by [Bootstrap Icons](https://icons.getbootstrap.com/)
 - 🔔 Notifications by [SweetAlert2](https://sweetalert2.github.io/)
 
-<div align="center">
+<div align="start">
   
 ### 🌟 Star this repository if you find it useful! 🌟
 
