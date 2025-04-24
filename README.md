@@ -4,10 +4,7 @@
 
 <div align="center">
   
-[![Made with Node.js](https://img.shields.io/badge/Made%20with-Node.js-3C873A?style=for-the-badge&logo=node.js)](https://nodejs.org/en/)
-[![Uses Express](https://img.shields.io/badge/Uses-Express.js-000000?style=for-the-badge&logo=express)](https://expressjs.com/)
-[![Built with Bootstrap](https://img.shields.io/badge/Built%20with-Bootstrap-7952B3?style=for-the-badge&logo=bootstrap)](https://getbootstrap.com/)
-[![Powered by Socket.io](https://img.shields.io/badge/Powered%20by-Socket.io-010101?style=for-the-badge&logo=socket.io)](https://socket.io/)
+[![My Skills](https://skillicons.dev/icons?i=nodejs,express,bootstrap,js)](https://skillicons.dev)
 
 </div>
 
@@ -36,13 +33,14 @@
 
 ### 🔌 Real-time Communication
   
-![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat&logo=socket.io&logoColor=white)
+[![My Skills](https://skillicons.dev/icons?i=socketio)](https://skillicons.dev)
+
+### 📹 Video Processing
+  
+[![My Skills](https://skillicons.dev/icons?i=nodejs,npm)](https://skillicons.dev)
+- youtube-dl-og
 
 </div>
-
-### 📹 Video Processing<br/>
-[![My Skills](https://skillicons.dev/icons?i=npm,nodejs)](https://skillicons.dev)
-- youtube-dl-og
 
 ## 📋 Prerequisites
 
@@ -76,7 +74,7 @@ Before you begin, ensure you have the following installed:
 ## 🎮 Usage
 
 1. 📋 Paste a YouTube video URL into the input field
-2. 🔍 Click "Get Info" to fetch video details
+2. 🔍 Click "Download" to fetch video details
 3. ⚙️ Select your preferred download options:
    - For video: Choose quality (Highest, High, Medium, Low)
    - For audio: Select the Audio tab
@@ -150,10 +148,21 @@ This project is licensed under the MIT License.
 
 Developed with ❤️ by Pasindu Madhuwantha (Pasindu OG)
 
-- <img src="https://skillicons.dev/icons?i=github" width="20" height="20" /> GitHub: [PasinduOG](https://github.com/PasinduOG)
-- <img src="https://skillicons.dev/icons?i=youtube" width="20" height="20" /> YouTube: [Pasindu OG](https://youtube.com/@pasindu_og_dev)
+<div align="center">
+  
+[![My Skills](https://skillicons.dev/icons?i=github)](https://github.com/PasinduOG)
+[![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://youtube.com/@pasindu_og_dev)
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/pasindu.og.dev)
+
+</div>
 
 ## 🙏 Acknowledgments
+
+<div align="center">
+  
+[![My Skills](https://skillicons.dev/icons?i=nodejs,bootstrap)](https://skillicons.dev)
+
+</div>
 
 - 🎬 This project uses [youtube-dl-og](https://www.npmjs.com/package/youtube-dl-og) for YouTube video processing
 - 🎨 UI designed with [Bootstrap 5](https://getbootstrap.com/)
@@ -165,3 +174,4 @@ Developed with ❤️ by Pasindu Madhuwantha (Pasindu OG)
 ### 🌟 Star this repository if you find it useful! 🌟
 
 </div>
+```
