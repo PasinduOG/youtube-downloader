@@ -74,6 +74,94 @@
         body.dark-mode .form-check-input:not(:checked) {
             background-color: #2d2d2d;
         }
+        
+        /* Additional dark mode styles for format options and audio options */
+        body.dark-mode .format-option {
+            background-color: #2d2d2d;
+            border-color: #444 !important;
+            color: #f5f5f5;
+        }
+        
+        body.dark-mode .format-option:hover {
+            background-color: #383838;
+        }
+        
+        body.dark-mode .format-option.selected {
+            border-color: #0d6efd !important;
+            background-color: rgba(13, 110, 253, 0.1);
+        }
+        
+        body.dark-mode .nav-tabs .nav-link {
+            color: #adb5bd !important;
+        }
+        
+        body.dark-mode .nav-tabs .nav-link.active {
+            background-color: #2d2d2d;
+            border-color: #444 #444 #2d2d2d;
+            color: #f5f5f5 !important;
+        }
+        
+        body.dark-mode .alert-info {
+            background-color: #1c2a38;
+            color: #9bbade;
+            border-color: #274b6f;
+        }
+        
+        /* Additional text components dark mode styles */
+        body.dark-mode #downloadProgressContainer span,
+        body.dark-mode #filesLoading p,
+        body.dark-mode #noFilesMessage p,
+        body.dark-mode #loadingSpinner p {
+            color: #f5f5f5 !important;
+        }
+        
+        body.dark-mode .btn-outline-secondary {
+            color: #adb5bd;
+            border-color: #444;
+        }
+        
+        body.dark-mode .btn-outline-secondary:hover {
+            background-color: #2d2d2d;
+            color: #f5f5f5;
+        }
+        
+        body.dark-mode .text-danger {
+            color: #ff6b6b !important;
+        }
+        
+        body.dark-mode .bg-white {
+            background-color: #1e1e1e !important;
+        }
+        
+        /* More comprehensive dark mode text handling */
+        body.dark-mode strong,
+        body.dark-mode b,
+        body.dark-mode label,
+        body.dark-mode p {
+            color: #f5f5f5 !important;
+        }
+        
+        body.dark-mode .navbar-brand,
+        body.dark-mode .navbar-light .navbar-brand {
+            color: #f5f5f5 !important;
+        }
+        
+        body.dark-mode .progress {
+            background-color: #2d2d2d;
+        }
+        
+        body.dark-mode .badge.bg-success {
+            background-color: #2e7d32 !important;
+        }
+        
+        body.dark-mode .spinner-border.text-secondary {
+            border-color: #adb5bd !important;
+            border-right-color: transparent !important;
+        }
+        
+        body.dark-mode .bi-folder-x.text-muted {
+            color: #adb5bd !important;
+        }
     </style>
 </head>
 
@@ -253,8 +341,12 @@
                                 </div>
 
                                 <div class="mt-3">
-                                    <button id="downloadBtn" class="btn btn-danger w-100">
+                                    <button id="downloadBtn" class="btn btn-danger w-100 mb-2">
                                         <i class="bi bi-download me-1"></i> Download
+                                    </button>
+                                    
+                                    <button id="downloadAnotherBtn" class="btn btn-outline-secondary w-100 d-none">
+                                        <i class="bi bi-plus-circle me-1"></i> Download Another Video
                                     </button>
 
                                     <!-- Download Progress Bar -->
@@ -299,7 +391,7 @@
                         </div>
                         <div class="text-center py-5 d-none" id="noFilesMessage">
                             <i class="bi bi-folder-x display-4 text-muted"></i>
-                            <p class="mt-3 text-muted">No files have been downloaded yet</p>
+                            <p class="mt-3">No files have been downloaded yet</p>
                         </div>
                     </div>
                 </div>

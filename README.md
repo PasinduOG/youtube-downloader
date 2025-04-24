@@ -110,6 +110,16 @@ youtube-downloader/
 
 ## 🔄 Recent Updates
 
+### Version 3.0.0 (April 2025)
+- 🚀 Significantly improved download speed with optimized processing
+- 🔒 Enhanced security with path normalization and validation
+- 🎨 Redesigned user interface with improved dark mode support
+- 📱 Added new responsive design for better mobile experience
+- ✨ Added "Download Another Video" button for better UX
+- 🛠️ Updated all dependencies to the latest versions
+- 🔄 Improved file management with better error handling
+- 🌐 Added social media integration with Facebook link
+
 ### Version 2.0.0 (February 2024)
 - ✨ Added dark mode support with system preference detection
 - 🚀 Improved download speed and reliability

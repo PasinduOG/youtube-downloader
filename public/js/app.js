@@ -22,6 +22,37 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeToggler = document.getElementById('themeToggler');
     const lightIcon = document.getElementById('lightIcon');
     const darkIcon = document.getElementById('darkIcon');
+    const downloaderSection = document.getElementById('downloaderSection');
+    const downloadAnotherBtn = document.getElementById('downloadAnotherBtn');
+
+    // Check if download was completed in previous session
+    if (localStorage.getItem('downloadComplete')) {
+        // Clear the flag
+        localStorage.removeItem('downloadComplete');
+        
+        // Make sure search form is visible and video details are hidden when page reloads
+        searchForm.classList.remove('d-none');
+        videoDetails.classList.add('d-none');
+        videoUrl.value = ''; // Clear the URL input
+    }
+
+    // Handle "Download Another Video" button click
+    downloadAnotherBtn.addEventListener('click', function() {
+        // Show the search form
+        searchForm.classList.remove('d-none');
+        
+        // Hide video details
+        videoDetails.classList.add('d-none');
+        
+        // Clear the URL input
+        videoUrl.value = '';
+        
+        // Hide download status
+        downloadStatus.classList.add('d-none');
+        
+        // Optionally scroll to the top
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
     // Theme management
     function initializeTheme() {
@@ -50,6 +81,25 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('theme', 'dark');
             lightIcon.classList.add('d-none');
             darkIcon.classList.remove('d-none');
+        }
+        
+        // Update file icon colors when theme changes
+        updateFileIconColors();
+    }
+    
+    // Update all file icons to match the current theme
+    function updateFileIconColors() {
+        const fileIcons = document.querySelectorAll('.file-icon');
+        if (document.body.classList.contains('dark-mode')) {
+            fileIcons.forEach(icon => {
+                icon.classList.remove('text-dark');
+                icon.classList.add('text-light');
+            });
+        } else {
+            fileIcons.forEach(icon => {
+                icon.classList.remove('text-light');
+                icon.classList.add('text-dark');
+            });
         }
     }
     
@@ -164,9 +214,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const description = videoInfo.description || 'No description available';
             videoDescription.textContent = description.length > 500 ? description.substring(0, 500) + '...' : description;
             
-            // Show video details
+            // Hide loading spinner and show video details
             loadingSpinner.classList.add('d-none');
             videoDetails.classList.remove('d-none');
+            
+            // The downloader section now contains the video details, so we don't need to hide it
+            // Instead, hide the search form to make a cleaner interface
+            searchForm.classList.add('d-none');
             
         } catch (error) {
             loadingSpinner.classList.add('d-none');
@@ -200,7 +254,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Add spinner to download status
             const statusSpinner = document.createElement('span');
-            statusSpinner.className = 'spinner-border spinner-border-sm ms-1';
+            statusSpinner.className = 'spinner-grow spinner-grow-sm ms-1';
             statusSpinner.setAttribute('role', 'status');
             statusSpinner.innerHTML = '<span class="visually-hidden">Loading...</span>';
             downloadStatus.appendChild(statusSpinner);
@@ -240,10 +294,19 @@ document.addEventListener('DOMContentLoaded', function() {
             // Reload files list
             loadFiles();
             
-            // Re-enable download button and hide progress after delay
+            // Set flag that download is complete
+            localStorage.setItem('downloadComplete', 'true');
+            
+            // Re-enable download button, show "Download Another Video" button, and hide progress after delay
             setTimeout(() => {
                 downloadBtn.disabled = false;
                 downloadProgressContainer.classList.add('d-none');
+                
+                // Show the "Download Another Video" button
+                downloadAnotherBtn.classList.remove('d-none');
+                
+                // Show alert about successful download
+                showAlert('Download completed successfully!', 'success');
             }, 1000);
             
         } catch (error) {
@@ -299,15 +362,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const isVideo = file.name.endsWith('.mp4');
         const isAudio = file.name.endsWith('.mp3');
         
-        let fileIcon = 'bi-file-earmark';
+        let fileIcon = 'bi-file-earmark-play';
         if (isVideo) fileIcon = 'bi-film';
         if (isAudio) fileIcon = 'bi-music-note-beamed';
+        
+        // Add theme-specific icon class
+        const iconColorClass = document.body.classList.contains('dark-mode') ? 'text-light' : 'text-dark';
         
         fileItem.innerHTML = `
             <div class="card h-100 shadow-sm">
                 <div class="card-body">
                     <div class="d-flex align-items-center mb-2">
-                        <i class="bi ${fileIcon} fs-3 me-2"></i>
+                        <i class="bi ${fileIcon} fs-3 me-2 file-icon ${iconColorClass}"></i>
                         <h6 class="mb-0 text-truncate" title="${file.name}">${file.name}</h6>
                     </div>
                     <p class="mb-0 text-muted small">Size: ${formatSize(file.size)}</p>
