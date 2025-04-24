@@ -24,27 +24,30 @@
 
 ## 🛠️ Technologies Used
 
-- 🖥️ **Frontend**: 
-  - ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white) HTML5
-  - ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white) CSS3
-  - ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) JavaScript
-  - ![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=flat&logo=bootstrap&logoColor=white) Bootstrap 5
+<div align="center">
+
+### 🖥️ Frontend
   
-- ⚙️ **Backend**: 
-  - ![Node.js](https://img.shields.io/badge/Node.js-3C873A?style=flat&logo=node.js&logoColor=white) Node.js
-  - ![Express.js](https://img.shields.io/badge/Express.js-000000?style=flat&logo=express&logoColor=white) Express.js
+[![My Skills](https://skillicons.dev/icons?i=html,css,js,bootstrap)](https://skillicons.dev)
+
+### ⚙️ Backend
   
-- 🔌 **Real-time Communication**: 
-  - ![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat&logo=socket.io&logoColor=white) Socket.io
+[![My Skills](https://skillicons.dev/icons?i=nodejs,express)](https://skillicons.dev)
+
+### 🔌 Real-time Communication
   
-- 📹 **Video Processing**: 
-  - youtube-dl-og
+[![My Skills](https://skillicons.dev/icons?i=socketio)](https://skillicons.dev)
+
+</div>
+
+### 📹 Video Processing
+- youtube-dl-og
 
 ## 📋 Prerequisites
 
 Before you begin, ensure you have the following installed:
-- ![Node.js](https://img.shields.io/badge/Node.js-3C873A?style=flat&logo=node.js&logoColor=white) [Node.js](https://nodejs.org/) (v14 or higher)
-- ![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=white) npm (comes with Node.js)
+- <img src="https://skillicons.dev/icons?i=nodejs" width="20" height="20" /> [Node.js](https://nodejs.org/) (v14 or higher)
+- <img src="https://skillicons.dev/icons?i=npm" width="20" height="20" /> npm (comes with Node.js)
 
 ## 📥 Installation
 
@@ -146,8 +149,8 @@ This project is licensed under the MIT License.
 
 Developed with ❤️ by Pasindu Madhuwantha (Pasindu OG)
 
-- ![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white) GitHub: [PasinduOG](https://github.com/PasinduOG)
-- ![YouTube](https://img.shields.io/badge/YouTube-FF0000?style=flat&logo=youtube&logoColor=white) YouTube: [Pasindu OG](https://youtube.com/@pasindu_og_dev)
+- <img src="https://skillicons.dev/icons?i=github" width="20" height="20" /> GitHub: [PasinduOG](https://github.com/PasinduOG)
+- <img src="https://skillicons.dev/icons?i=youtube" width="20" height="20" /> YouTube: [Pasindu OG](https://youtube.com/@pasindu_og_dev)
 
 ## 🙏 Acknowledgments
 
