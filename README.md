@@ -2,7 +2,7 @@
 
 > 📥 A vibrant web application that allows you to download YouTube videos and audio in various formats and qualities.
 
-<div align="center">
+<div align="start">
   
 [![My Skills](https://skillicons.dev/icons?i=nodejs,express,bootstrap,js)](https://skillicons.dev)
 
@@ -21,7 +21,7 @@
 
 ## 🛠️ Technologies Used
 
-<div align="center">
+<div align="start">
 
 ### 🖥️ Frontend
   
@@ -33,11 +33,11 @@
 
 ### 🔌 Real-time Communication
   
-[![My Skills](https://skillicons.dev/icons?i=socketio)](https://skillicons.dev)
+![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat&logo=socket.io&logoColor=white)
 
 ### 📹 Video Processing
   
-[![My Skills](https://skillicons.dev/icons?i=nodejs,npm)](https://skillicons.dev)
+[![My Skills](https://skillicons.dev/icons?i=npm)](https://skillicons.dev)
 - youtube-dl-og
 
 </div>
@@ -112,7 +112,7 @@ youtube-downloader/
 
 ## 🔄 Recent Updates
 
-### Version 3.0.0 (April 2025)
+### Version 1.0.0 (April 2025)
 - 🚀 Significantly improved download speed with optimized processing
 - 🔒 Enhanced security with path normalization and validation
 - 🎨 Redesigned user interface with improved dark mode support
@@ -121,24 +121,6 @@ youtube-downloader/
 - 🛠️ Updated all dependencies to the latest versions
 - 🔄 Improved file management with better error handling
 - 🌐 Added social media integration with Facebook link
-
-### Version 2.0.0 (February 2024)
-- ✨ Added dark mode support with system preference detection
-- 🚀 Improved download speed and reliability
-- 🔧 Enhanced error handling and user feedback
-- 📱 Better mobile responsiveness
-- 🛠️ Updated dependencies to latest versions
-
-### Version 1.5.0 (December 2023)
-- ⚡ Implemented Socket.io for real-time download progress
-- 🎨 Redesigned user interface with Bootstrap 5
-- 📊 Added detailed progress tracking with percentage and speed
-- 🔍 Improved video info display with more details
-
-### Version 1.0.0 (October 2023)
-- 🎬 Initial release with basic download functionality
-- 🎵 Support for video and audio downloads
-- 📁 File management system
 
 ## 📜 License
 
