@@ -162,6 +162,68 @@
         body.dark-mode .bi-folder-x.text-muted {
             color: #adb5bd !important;
         }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 767px) {
+            .container {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+            
+            .navbar-brand {
+                font-size: 0.95rem;
+            }
+            
+            .card {
+                margin-bottom: 15px;
+            }
+            
+            .card-header {
+                padding: 0.75rem;
+            }
+            
+            .card-body {
+                padding: 1rem;
+            }
+            
+            #filesContainer .card {
+                margin-bottom: 10px;
+            }
+            
+            .format-option {
+                padding: 0.75rem !important;
+            }
+            
+            .format-option label strong {
+                font-size: 0.9rem;
+            }
+            
+            .format-option small {
+                font-size: 0.75rem;
+            }
+            
+            /* Compact file display on mobile */
+            #filesContainer .col-md-4 {
+                padding-left: 7px;
+                padding-right: 7px;
+            }
+            
+            #downloadTabs .nav-link {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.9rem;
+            }
+            
+            /* Footer mobile adjustments */
+            footer {
+                text-align: center;
+                margin-top: 2rem !important;
+            }
+            
+            footer .d-flex {
+                flex-direction: column;
+                gap: 0.5rem !important;
+            }
+        }
     </style>
 </head>
 
@@ -183,7 +245,7 @@
 
                 <!-- Social Media Links -->
                 <div class="navbar-nav ms-auto">
-                    <div class="d-flex gap-1">
+                    <div class="d-flex gap-3 gap-lg-1">
                         <a href="https://github.com/PasinduOG" class="nav-link text-dark fs-5" target="_blank"
                             title="GitHub">
                             <i class="bi bi-github"></i>
@@ -374,23 +436,23 @@
         <!-- Files Section -->
         <div id="filesSection" class="d-none">
             <div class="card shadow-sm border-0 rounded-3">
-                <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center">
-                    <h5 class="mb-0">Downloaded Files</h5>
-                    <button id="refreshFilesBtn" class="btn btn-sm btn-outline-secondary">
+                <div class="card-header bg-white border-0 d-flex justify-content-between align-items-center flex-wrap">
+                    <h5 class="mb-0 me-2">Downloaded Files</h5>
+                    <button id="refreshFilesBtn" class="btn btn-sm btn-outline-secondary mt-2 mt-sm-0">
                         <i class="bi bi-arrow-clockwise me-1"></i> Refresh
                     </button>
                 </div>
                 <div class="card-body">
-                    <div id="filesContainer" class="row g-3">
+                    <div id="filesContainer" class="row g-2 g-md-3">
                         <!-- Files will be loaded here -->
-                        <div class="text-center py-5" id="filesLoading">
+                        <div class="text-center py-4 py-md-5" id="filesLoading">
                             <div class="spinner-border text-secondary" role="status">
                                 <span class="visually-hidden">Loading...</span>
                             </div>
                             <p class="mt-3">Loading files...</p>
                         </div>
-                        <div class="text-center py-5 d-none" id="noFilesMessage">
-                            <i class="bi bi-folder-x display-4 text-muted"></i>
+                        <div class="text-center py-4 py-md-5 d-none" id="noFilesMessage">
+                            <i class="bi bi-folder-x display-5 text-muted"></i>
                             <p class="mt-3">No files have been downloaded yet</p>
                         </div>
                     </div>
@@ -399,10 +461,10 @@
         </div>
 
         <!-- Footer -->
-        <footer class="mt-5 pt-4 pb-3 border-top">
+        <footer class="mt-4 mt-md-5 pt-3 pb-3 border-top">
             <div class="row">
                 <div class="col-12 text-center mb-3">
-                    <h6 class="text-muted mb-3 fw-bold">YouTube Video Downloader</h6>
+                    <h6 class="text-muted mb-2 mb-md-3 fw-bold">YouTube Video Downloader</h6>
                     <p class="mb-1">Developed by <strong class="text-danger">&copy; Pasindu Madhuwantha</strong> (Pasindu OG)
                     </p>
                     <p class="mb-1">
@@ -412,7 +474,7 @@
                     </p>
                 </div>
                 <div class="col-12">
-                    <div class="d-flex justify-content-center gap-4">
+                    <div class="d-flex justify-content-center gap-2 gap-md-4 flex-wrap">
                         <div class="text-muted small">Version: 2.0.0</div>
                         <div class="text-muted small">License: MIT</div>
                         <div class="text-muted small">Copyright © 2025 PasinduOG</div>
