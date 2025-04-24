@@ -36,7 +36,7 @@
 
 ### 🔌 Real-time Communication
   
-[![My Skills](https://skillicons.dev/icons?i=socketio)](https://skillicons.dev)
+![Socket.io](https://img.shields.io/badge/Socket.io-010101?style=flat&logo=socket.io&logoColor=white) Socket.io
 
 </div>
 
