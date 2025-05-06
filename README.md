@@ -18,6 +18,8 @@
 - 🎨 Clean and responsive user interface
 - 🚀 Fast and efficient downloading process
 - 🔒 Simple and secure local storage of files
+- 🌙 Dark mode support for comfortable viewing
+- 📱 Fully responsive design for mobile devices
 
 ## 🛠️ Technologies Used
 
@@ -81,6 +83,7 @@ Before you begin, ensure you have the following installed:
 4. 📥 Click "Download" button
 5. ⏳ Monitor download progress with the progress bar
 6. 📁 Access downloaded files in the "Downloaded Files" section
+7. 🔄 Use the "Download Another Video" button to start a new download
 
 ## 💻 Development
 
@@ -109,8 +112,16 @@ youtube-downloader/
 - 📥 `POST /api/download` - Download video or audio
 - 📋 `GET /api/files` - List downloaded files
 - 🗑️ `DELETE /api/files/:filename` - Delete a file
+- 📊 `GET /api/stats` - Get download statistics
 
 ## 🔄 Recent Updates
+
+### Version 1.1.0 (May 2025)
+- 🔧 Fixed compatibility issues with latest YouTube changes
+- ⚡ Improved error handling and user feedback
+- 📈 Added download statistics tracking
+- 🔄 Implemented batch download capability
+- 🔍 Enhanced search functionality
 
 ### Version 1.0.0 (April 2025)
 - 🚀 Significantly improved download speed with optimized processing
@@ -121,6 +132,14 @@ youtube-downloader/
 - 🛠️ Updated all dependencies to the latest versions
 - 🔄 Improved file management with better error handling
 - 🌐 Added social media integration with Facebook link
+
+## 🔮 Upcoming Features
+
+- 🎬 Playlist support for batch downloading
+- 🔐 User accounts and download history
+- 📱 Native mobile applications
+- 🌐 Support for more video platforms
+- 🎯 Custom video trimming and editing
 
 ## 📜 License
 
@@ -150,10 +169,14 @@ Developed with ❤️ by Pasindu Madhuwantha (Pasindu OG)
 - 🎨 UI designed with [Bootstrap 5](https://getbootstrap.com/)
 - 🔣 Icons by [Bootstrap Icons](https://icons.getbootstrap.com/)
 - 🔔 Notifications by [SweetAlert2](https://sweetalert2.github.io/)
+- ⚡ Real-time updates with [Socket.io](https://socket.io/)
+
+## 🐛 Reporting Issues
+
+If you encounter any issues or have suggestions for improvements, please open an issue on GitHub or contact me directly.
 
 <div align="start">
   
 ### 🌟 Star this repository if you find it useful! 🌟
 
 </div>
-```
